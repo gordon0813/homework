@@ -1,6 +1,5 @@
 clear all
 clc
-
 function f=central(x,h)
    h
    L=size(x)(2);
@@ -20,6 +19,9 @@ function re=remove_boundry_s(x)
   L=size(x)(2);
   re=x(1,1:L-1);
 endfunction
+realx=linspace(0,2*pi,1387);
+
+
 n16=linspace(0,2*pi,17);
 n32=linspace(0,2*pi,33);
 x16=remove_boundry(n16);
@@ -33,15 +35,17 @@ fx32=remove_boundry_s(n32);
 y16=fft(f(fx16));
 y32=fft(f(fx32));
 yf16=real(ifft((y16.*[[0:1:7],[0],[-7:1:-1]])*1i));
+yf32=real(ifft((y32.*[[0:1:15],[0],[-15:1:-1]])*1i));
 
-yr16=realdf(x16);
-yr32=realdf(x32);
+yreal=realdf(realx);
 
-
-plot(x16,yc16,"r")
+figure(1)
+plot(x16,yc16,"r-*")
 hold 
-plot(x32,yc32,"g")
- 
-plot(x16,yr16,"b-*")
-
-plot(fx16,yf16,"k")
+plot(realx,yreal,"g")
+plot(fx16,yf16,"k-*")
+figure(2)
+plot(x32,yc32,"r-*")
+hold
+plot(realx,yreal,"g")
+plot(fx32,yf32,"k-*")
