@@ -50,14 +50,14 @@ figure(1)
 plot(x16,yc16,"r-*")
 title("n=16 b1")
 hold 
-plot(realx,yreal,"g")
+plot(realx,yreal,"k")
 plot(fx16,yf16,"k-*")
 figure(2)
 
 plot(x32,yc32,"r-*")
 title("n=32 b1")
 hold
-plot(realx,yreal,"g")
+plot(realx,yreal,"k")
 plot(fx32,yf32,"k-*")
 
 
@@ -76,12 +76,12 @@ figure(3)
 plot(x16,yc16,"r-*")
 title("n=16 b2")
 hold 
-plot(realx,yreal,"g")
+plot(realx,yreal,"k")
 plot(fx16,yf16,"k-*")
 figure(4)
 
 plot(x32,yc32,"r-*")
 title("n=32 b2")
 hold
-plot(realx,yreal,"g")
+plot(realx,yreal,"k")
 plot(fx32,yf32,"k-*")

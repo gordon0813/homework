@@ -11,7 +11,7 @@ function re=secd(x)
   re=-47*exp(-x/2).*x.^2   -exp(-x/2).*x.^4+16*exp(-x/2).*x.^3-8*exp(-x/2).*x+8*exp(-x/2)
 endfunction
 d=[]
-n=12
+n=8
 x=[0:1:n-1]
 x=cos(x/(n-1)*pi)
 #x=[1,0.809,0.309,-0.309,-0.809,-1]
@@ -49,7 +49,7 @@ xreal=linspace(-1,1,33)
 fd=firstd(xreal)
 
 hold
-plot(xreal,fd,"g")
+plot(xreal,fd,"k")
 
 ydd=d*(d*t1)
 figure(2)
