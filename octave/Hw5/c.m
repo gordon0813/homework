@@ -10,7 +10,7 @@ function f=boundary2(x,y)
   ref(1,length(ref))=0;
   f=x(find(ref));
 end
-f1=[0.1:0.001:1]
+f1=[0.1:0.001:1];
 
 f1copy=f1;
 f2=f1*0;
