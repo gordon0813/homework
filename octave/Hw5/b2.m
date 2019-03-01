@@ -28,8 +28,6 @@ broke_1=[broke_1,1]
 else
 broke_1=[broke_1,0]
 endif
-
-
 yback=[4];
 for i=1:length(x01)-1;
   yback=[yback,yback(1,i)/(1+sep*f(x01(1,i+1)))];

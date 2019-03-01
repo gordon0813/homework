@@ -46,7 +46,7 @@ for i=1:length(x01)-1
    k1=sep*yrq4(1,i)*(-f(x01(1,i)));
    k2=sep*(yrq4(1,i)+0.5*k1)*(-f(x01(1,i)+sep*0.5));
    k3=sep*(yrq4(1,i)+0.5*k2)*(-f(x01(1,i)+sep*0.5));
-   k4=sep*(yrq4(1,i)+k1)*(-f(x01(1,i)+sep));
+   k4=sep*(yrq4(1,i)+k3)*(-f(x01(1,i)+sep));
    yrq4=[yrq4,yrq4(1,i)+1/6*k1+1/3*(k2+k3)+1/6*k4];
 end
 yrq4(yrq4>4.2)=4.2

@@ -38,6 +38,6 @@ for i =1:length(x);
  
   
 end
-plot(f1copy,f3)
+plot(f1copy,f2)
 b=boundary2(f1copy,f2)
 
