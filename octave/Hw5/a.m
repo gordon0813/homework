@@ -2,6 +2,7 @@ clear all
 clc
 x=linspace(1,-3,2000);
 y=linspace(3,-3,2000);
+testt=size(x)
 function f=boundary2(x,y)
   img=x+i*y;
   ref=abs(1+img+img.^2/2);
