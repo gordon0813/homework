@@ -5,6 +5,7 @@ public class Predict_banker {
 	private node root;
 	private node nownode;
 	private double [] possibility_list;
+	// c is the cards that are not include handcard of banker
 	public Predict_banker(int [] c,int handcard) {
 		card=new int [11];
 		for (int i=1;i<11;i++) {
@@ -19,7 +20,8 @@ public class Predict_banker {
 	}
 	public double[] cal_win_rate() {
 		while(true) {
-			nownode.show_all();
+			//nownode.show_all();
+			
 			if(nownode.enter_node()) {
 				if(this.have_card(nownode)) {
 					int temp_point=nownode.count_point();
@@ -28,7 +30,7 @@ public class Predict_banker {
 					}else if(temp_point<17){
 						nownode=nownode.setchild();
 					}else {
-						System.out.println("get");
+						//System.out.println("get");
 						this.possibility_list[temp_point-17]+=this.count_possiblity(nownode);
 						nownode.next();
 					}
@@ -66,7 +68,7 @@ public class Predict_banker {
 		return re;
 	}
 
-	// is there still a card that can be used by nownode.index
+	// is there still a card that can be used by nownode.index or not
 	private boolean have_card(node nod) {
 		
 		int [] temphistory=nod.get_history();
